@@ -23,16 +23,24 @@
                         <img src="img/logo.png" alt="logo">
                     </div>
                 </a>
-                <nav>
-                    <ul>
-                        <li><a href="">HOME</a> </li>
-                        <li><a href="">HOW IT WORKS</a></li>
-                        <li><a href="">ABOUT US</a></li>
-                        <li><a href="">PRODUCTS</a></li>
-                        <li><a href="">CONTACT US</a></li>
-                        <li><a href="">PROFILE</a> <img src="img/Ellipseblue.svg" alt=""></li>
+                <nav class=" navbar-collapse justify-content-md-center" id="navbarsExample08">
+                    <ul class="navbar-nav letter-spacing">
+                        <li class="nav-item"><a href="">HOME</a> </li>
+                        <li class="nav-item"><a href="">HOW IT WORKS</a></li>
+                        <li class="nav-item"><a href="">ABOUT US</a></li>
+                        <li class="nav-item"><a href="">PRODUCTS</a></li>
+                        <li class="nav-item"><a href="">CONTACT US</a></li>
+                        <li class="nav-item"><a href="">PROFILE</a> <img src="img/Ellipseblue.svg" alt=""></li>
                     </ul>
                 </nav>
+
+
+
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <label id="hamburger" class="hamburger">
+                    <span class="navicon"></span>
+                </label>
+                </div>
             </header>
             <main>
                 <section>
@@ -52,7 +60,7 @@
                                                 <img src="img/ILLUSTRATION.svg" alt="">
                                             </div>
                                             <div class="tab-sub-block-input">
-                                                <input type="number" id="Prise" min="1" max="5">
+                                                <input type="number" id="Prise" min="1" max="9999">
                                             </div>
                                             <div class="tab-sub-block-text">
                                                 <p>SQFT</p>
@@ -76,14 +84,14 @@
                                     </div>
                                     <div class="tab-block">
                                         <div class="tab-two-content">
-                                            <a href="#" class="soone">
+                                            <a href="#" class="soone" data-text="1">
                                                 <div class="tab-two-contentblock">
                                                     <img src="img/hausone.svg" alt="">
                                                     <p class="housone storieso">1 story</p>
                                                     <p>Learn more</p>
                                                 </div>
                                             </a>
-                                            <a href="#" class="sotwo">
+                                            <a href="#" class="sotwo" data-text="2">
                                                 <div class="tab-two-contentblock">
                                                     <img src="img/haustwo.svg" alt="">
                                                     <p class="housone storiest">1 story2</p>
@@ -91,7 +99,7 @@
                                                 </div>
                                             </a>
 
-                                            <a href="#" class="sothree">
+                                            <a href="#" class="sothree" data-text="3">
                                                 <div class="tab-two-contentblock">
                                                     <img src="img/hausthree.svg" alt="">
                                                     <p class="housone storiesth">2 stories </p>
@@ -110,7 +118,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="tab mob-tab_marg-b">
                                 <div class="tab-main-content">
                                     <div class="tab-main-content-title">
@@ -119,14 +126,14 @@
                                     </div>
                                     <div class="tab-block">
                                         <div class="tab-three-content">
-                                            <a href="#" class="stone">
+                                            <a href="#" class="stone" data-text_el="noGarage">
                                                 <div class="tab-three-contentblock">
                                                     <img src="img/haussmal.svg" alt="">
                                                     <p class="housone noGarage">No garage</p>
                                                     <p>Learn more</p>
                                                 </div>
                                             </a>
-                                            <a href="#" class="sttwo">
+                                            <a href="#" class="sttwo" data-text_el="detachedGarage">
                                                 <div class="tab-three-contentblock">
                                                     <img src="img/haussmallGar.svg" alt="">
                                                     <p class="housone detachedGarage">Detached garage</p>
@@ -134,14 +141,14 @@
                                                 </div>
                                             </a>
 
-                                            <a href="#" class="stthree">
+                                            <a href="#" class="stthree" data-text_el="attachedGarage">
                                                 <div class="tab-three-contentblock">
                                                     <img src="img/haussmallGarTwo.svg" alt="">
                                                     <p class="housone attachedGarage">Attached garage</p>
                                                     <p>Learn more</p>
                                                 </div>
                                             </a>
-                                            <a href="#" class="stfoure">
+                                            <a href="#" class="stfoure" data-text_el="attachedGaragee">
                                                 <div class="tab-three-contentblock">
                                                     <img src="img/haussmallGarThree.svg" alt="">
                                                     <p class="housone attachedGaragee">Attached garage</p>
@@ -161,7 +168,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="tab mob-tab_marg-b">
                                 <div class="tab-main-content">
                                     <div class="tab-main-content-title">
@@ -169,14 +175,14 @@
                                     </div>
                                     <div class="tab-block">
                                         <div class="tab-foure-content">
-                                            <a href="#" class="sfone">
+                                            <a href="#" class="sf">
                                                 <div class="tab-foure-contentblock">
                                                     <img src="img/smallBild.svg" alt="">
                                                     <p class="housone simple">Simple</p>
                                                     <p>Learn more</p>
                                                 </div>
                                             </a>
-                                            <a href="#" class="sftwo">
+                                            <a href="#" class="sf">
                                                 <div class="tab-foure-contentblock">
                                                     <img src="img/midlebild.svg" alt="">
                                                     <p class="housone moderate">Moderate</p>
@@ -184,7 +190,7 @@
                                                 </div>
                                             </a>
 
-                                            <a href="#" class="sfthree">
+                                            <a href="#" class="sf">
                                                 <div class="tab-foure-contentblock">
                                                     <img src="img/largbild.svg" alt="">
                                                     <p class="housone complex">Complex</p>
@@ -256,7 +262,7 @@
                 </section>
                 <div class="sidebar">
                     <div class="steps">
-                        <div class="step-num" style="text-align:center;">
+                        <div class="step-num">
                             <p class="step">Type of project</p>
                             <p id="typeProject" class="result"><b>Roofing</b></p>
                             <p class="step">Square footage</p>
@@ -275,127 +281,9 @@
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script> -->
     <script src="js/main.js"></script>
 
-    <!-- <script>
-        function refresh() {
-            var prise = '';
-            document.querySelector('#sowePrise p').innerText = prise;
-        }
 
-        var currentTab = 0; // Current tab is set to be the first tab (0)
-        showTab(currentTab); // Display the crurrent tab
-
-        function showTab(n) {
-            // This function will display the specified tab of the form...
-            var x = document.getElementsByClassName("tab");
-            x[n].style.display = "block";
-            //... and fix the Previous/Next buttons:
-            if (n == 0) {
-                $('.step__button_rew').css('display', 'none');
-                // document.getElementsByClassName("step__button_rew").style.display = "none";
-            } else {
-                $('.step__button_rew').css('display', 'inline');
-                // document.getElementsByClassName("step__button_rew").style.display = "inline";
-            }
-            if (n == x.length - 1) {
-                // document.getElementsByClassName("step__button_next").innerHTML = "Submit";
-                $('.step__button_next').html('Submit');
-            } else {
-                // document.getElemenstByClassName("step__button_next").innerHTML = "Next";
-            }
-            //... and run a function that will display the correct step indicator:
-            // fixStepIndicator(n);
-            document.querySelectorAll('.step').forEach(function(el) {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.step')[currentTab].classList.add('active');
-        }
-
-        function viewTab(n) {
-            // This function will figure out which tab to display
-            var x = document.getElementsByClassName("tab");
-
-            // Exit the function if any field in the current tab is invalid:
-            if (!validateForm()) return false;
-            // Hide the current tab:
-            x[currentTab].style.display = "none";
-            // Increase or decrease the current tab by 1:
-            currentTab = currentTab + n;
-            // if you have reached the end of the form...
-            if (currentTab >= x.length) {
-                // ... the form gets submitted:
-                document.getElementById("regForm").submit();
-                return false;
-            }
-            showTab(currentTab);
-            return true;
-            // Otherwise, display the correct tab:
-        }
-
-        function checkLastPage() {
-            return (currentTab + 1 > document.querySelectorAll('.step').length - 1);
-        }
-
-        function nextSteep(n) {
-            if (checkLastPage()) {
-                alert('end')
-                return false;
-            }
-            var status = viewTab(n);
-            console.log(status)
-            if (status) {
-                document.querySelectorAll(".step")[currentTab - 1].classList.add('finish');
-            }
-            var prise = ($("#Prise").val());
-            document.querySelector('#sowePrise p').innerText = prise;
-        }
-
-        function prevSteep(n) {
-            var status = viewTab(n);
-            document.querySelectorAll(".step")[currentTab].classList.remove('finish');
-        }
-
-        function validateForm() {
-            // This function deals with validation of the form fields
-
-            var x,
-                y,
-                i,
-                valid = true;
-            x = document.getElementsByClassName("tab");
-            y = x[currentTab].getElementsByTagName("input");
-            // A loop that checks every input field in the current tab:
-            for (i = 0; i < y.length; i++) {
-                // If a field is empty...
-                if (y[i].required == "true" && y[i].value == "") {
-                    // add an "invalid" class to the field:
-                    // y[i].className += " invalid";
-                    // and set the current valid status to false
-                    valid = false;
-                }
-            }
-            // If the valid status is true, mark the step as finished and valid:
-            // if (valid) {
-            //     document.getElementsByClassName("step")[currentTab].className += " finish";
-            // }
-            return valid; // return the valid status
-        }
-
-        function fixStepIndicator(n) {
-            // This function removes the "active" class of all steps...
-            var i,
-                x = document.getElementsByClassName("step");
-            for (i = 0; i < x.length; i++) {
-                x[i].className = x[i].className.replace(" active", "");
-                console.log(x)
-            }
-            //... and adds the "active" class on the current step:
-            x[n].className += " active";
-
-        }
-    </script> -->
 </body>
 
 </html>
