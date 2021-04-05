@@ -89,7 +89,7 @@ nav ul li:last-child {
     z-index: 22;
 } */
 
-main {
+.main {
     display: flex;
     justify-content: space-between;
     margin: 24px 0 40px 0;
@@ -828,7 +828,7 @@ input.invalid {
         width: 100%;
         overflow-x: hidden;
     }
-    main {
+    .main {
         flex-direction: column;
         margin: 0;
     }
@@ -946,7 +946,7 @@ input.invalid {
     .statisticsLine {
         width: 77%;
     }
-        .tab-sub-block-text {
+    .tab-sub-block-text {
         margin: 20px auto;
     }
 }
