@@ -138,7 +138,7 @@ main {
     color: #135C7D;
 }
 
-.step__button_prew,
+
 .step__button_next,
 .step__last_next {
     font-family: 'Poppins Regular';
@@ -154,7 +154,20 @@ main {
     border: unset;
     background: #F0F7FA;
 }
-
+.step__button_prew{
+    font-family: 'Poppins Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #135C7D;
+    padding: 10px 36px;
+    border: unset;
+    background: #F0F7FA;
+}
 .steps {
     display: flex;
     flex-direction: column;
