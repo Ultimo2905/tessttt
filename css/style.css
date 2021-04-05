@@ -946,4 +946,7 @@ input.invalid {
     .statisticsLine {
         width: 77%;
     }
+        .tab-sub-block-text {
+        margin: 20px auto;
+    }
 }
