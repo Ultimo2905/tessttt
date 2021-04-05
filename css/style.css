@@ -910,8 +910,9 @@ input.invalid {
         margin: 20px auto;
     }
     .tab-three-contentblock {
-        max-width: 120px;
-        height: auto
+        max-width: 130px;
+        height: auto;
+        margin: 0 15px;
     }
     .step.finish~.result,
     .step.active~.result {
@@ -931,8 +932,8 @@ input.invalid {
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
-        max-width: 120px;
-        margin: 10px 0;
+        max-width: 130px;
+        margin: 15px;
     }
     .numbers {
         line-height: 28px;
@@ -941,5 +942,8 @@ input.invalid {
     .statisticsCount,
     .buttons-controls a {
         margin: 20px auto;
+    }
+    .statisticsLine {
+        width: 77%;
     }
 }
