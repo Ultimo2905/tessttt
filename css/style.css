@@ -140,7 +140,6 @@ main {
     color: #135C7D;
 }
 
-
 .step__button_next,
 .step__last_next {
     font-family: 'Poppins Regular';
@@ -156,7 +155,8 @@ main {
     border: unset;
     background: #F0F7FA;
 }
-.step__button_prew{
+
+.step__button_prew {
     font-family: 'Poppins Regular';
     font-style: normal;
     font-weight: 600;
@@ -170,6 +170,7 @@ main {
     border: unset;
     background: #F0F7FA;
 }
+
 .steps {
     display: flex;
     flex-direction: column;
@@ -476,7 +477,8 @@ input.invalid {
 
 .tab-three-contentblock {
     width: 100%;
-    max-width: 250px;
+    max-width: 230px;
+    min-width: 200px;
     height: 280px;
     display: flex;
     align-items: center;
@@ -487,6 +489,7 @@ input.invalid {
 @media screen and (max-width: 1224px) {
     .tab-three-contentblock {
         max-width: 200px;
+        min-width: 0;
     }
 }
 
@@ -723,31 +726,220 @@ input.invalid {
 /* ///////////////////////////////// */
 
 
-/* .tab-two-content a:focus  .step__button_nextone{
-    background: #26DEFF;
-    border: 1px solid #26DEFF;
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: pointer;
+/* hamburger-menu */
+
+.hamburger-menu {
+    display: none;
 }
-.tab-two-content a:active  .step__button_nextone{
-    background: #26DEFF;
-    border: 1px solid #26DEFF;
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: pointer;
+
+.navicon {
+    background-color: #26DEFF;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: fixed;
+    transition: background .2s ease-out;
 }
-.tab-two-content a:visited  .step__button_nextone{
-    background: #26DEFF;
-    border: 1px solid #26DEFF;
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: pointer;
+
+.navicon:before {
+    top: 6px;
+    transition: 0.3s;
 }
-.tab-two-content a:checked  .step__button_nextone{
-    background: #26DEFF;
-    border: 1px solid #26DEFF;
-    box-sizing: border-box;
-    border-radius: 5px;
-    cursor: pointer;
-} */
+
+.navicon:after {
+    top: -6px;
+    transition: 0.3s;
+}
+
+.navicon:before,
+.navicon:after {
+    background-color: #26DEFF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 30px;
+    height: 2px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.hamburger.opens .navicon {
+    background: unset;
+    transition: 0.3s;
+}
+
+@media (max-width: 968px) {
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        z-index: 55556;
+        right: 20px;
+        top: 40px;
+        width: 50px;
+    }
+}
+
+.hamburger.opens:not(.steps) .navicon:before,
+.hamburger.opens:not(.steps) .navicon:after {
+    top: 0;
+    transition: 0.3s;
+}
+
+.hamburger.opens .navicon:after {
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+
+.hamburger.opens .navicon:before {
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 968px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        z-index: 55555;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        text-align: center;
+        padding: 0;
+        justify-content: flex-start;
+        margin-top: 40px;
+    }
+    nav ul li {
+        margin: 20px auto;
+    }
+}
+
+
+/* ///////////////////////////////// */
+
+
+/* @media screen*/
+
+@media screen and (max-width: 1224px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    main {
+        flex-direction: column;
+        margin: 0;
+    }
+    .multistep {
+        flex-basis: 100%;
+        max-height: max-content;
+    }
+    .tab-main-content-title h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .sidebar {
+        margin: 30px auto;
+        flex-basis: 100%;
+    }
+    .sidebar,
+    .steps {
+        width: 100%;
+        height: auto;
+    }
+    .step-num {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 0;
+    }
+    .step::after {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        left: unset;
+        margin: 0 0 0 -20px;
+    }
+    .step-num p {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: center;
+        padding-left: 32px;
+        max-width: 50%;
+        margin: 0;
+        font-size: 13px;
+    }
+    .tab-two-content {
+        margin-top: 0;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .tab-two-contentblock {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 110px;
+        margin: 20px auto;
+    }
+    .tab-two-contentblock p:nth-child(2),
+    .tab-three-contentblock p:nth-child(2),
+    .tab-foure-contentblock p:nth-child(2) {
+        width: 100%;
+        height: 56px;
+        font-size: 14px;
+        line-height: 18px;
+        max-width: 100px;
+        padding: 5px;
+        margin: 20px 0;
+    }
+    .tab-three-content {
+        margin-top: 0;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    .tab-three-contentblock {
+        max-width: 120px;
+        height: auto
+    }
+    .step.finish~.result,
+    .step.active~.result {
+        padding-left: 10px;
+    }
+    .tab-foure-content {
+        margin: 20px 0;
+        align-items: baseline;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .tab-foure-contentblock {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        max-width: 120px;
+        margin: 10px 0;
+    }
+    .numbers {
+        line-height: 28px;
+        font-size: 24px;
+    }
+    .statisticsCount,
+    .buttons-controls a {
+        margin: 20px auto;
+    }
+}
